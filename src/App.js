@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box, Flex } from '@chakra-ui/react';
+import NavBar from './components/NavBar';
+import Body from './components/Body';
+import SideSection from './components/SideSection';
+import RightSideSection from './components/RightSideSection';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <NavBar />
+      <Flex>
+        <SideSection/>
+        <Body/>
+        <RightSideSection/>
+      </Flex>
+    </Box>
   );
 }
 
